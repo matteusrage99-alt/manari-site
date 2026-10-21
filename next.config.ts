@@ -1,18 +1,11 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
-  images: {
-    // Imagens demonstrativas servidas pela CDN do Unsplash (claramente provisórias).
-    // Substitua pelas fotografias oficiais da MANARI editando src/content/site.ts.
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
-  },
-};
+/**
+ * Configuração enxuta e portável — o site é 100% estático e usa apenas
+ * imagens locais (em /public), então não precisamos de flags experimentais
+ * nem de domínios de imagem remotos. Isso maximiza a compatibilidade do
+ * build em diferentes ambientes de hospedagem.
+ */
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
