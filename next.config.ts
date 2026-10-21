@@ -1,16 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
+  images: {
+    // Imagens demonstrativas servidas pela CDN do Unsplash (claramente provisórias).
+    // Substitua pelas fotografias oficiais da MANARI editando src/content/site.ts.
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
-    },
+    ],
   },
 };
 

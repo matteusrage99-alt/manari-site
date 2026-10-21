@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   MANARI — Sistema visual
+   Paleta: verde floresta, areia, marfim, terracota, carvão
+   Tipografia: Cormorant Garamond (títulos) + Inter (textos)
+   ========================================================================== */
+
+@theme {
+  /* Paleta oficial MANARI */
+  --color-forest: #243525; /* verde profundo */
+  --color-forest-deep: #1a2619; /* variação mais escura para rodapé/contrastes */
+  --color-moss: #4b604b; /* verde musgo (cor do logotipo) */
+  --color-sand: #e5d0ac; /* areia */
+  --color-ivory: #f9f5ea; /* marfim */
+  --color-terracotta: #a05d37; /* terracota */
+  --color-charcoal: #1a2619; /* neutro escuro (alias do verde profundo escuro) */
+
+  /* Semântica base */
+  --color-background: var(--color-ivory);
+  --color-foreground: var(--color-charcoal);
+
+  /* Tipografia (variáveis injetadas por next/font em layout.tsx) */
+  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Easing para animações discretas */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-ivory);
+  --foreground: var(--color-charcoal);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  /* Compensa o cabeçalho fixo ao navegar por âncoras */
+  scroll-padding-top: 5rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Foco visível e acessível em toda a interface */
+:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--color-terracotta);
+  color: var(--color-ivory);
+}
+
+/* --------------------------------------------------------------------------
+   Utilitários tipográficos
+   -------------------------------------------------------------------------- */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Kicker: pequena etiqueta em versalete acima dos títulos */
+.kicker {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Animações de entrada discretas (revelação ao rolar)
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s var(--ease-soft),
+    transform 0.9s var(--ease-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Textura de grão sutil para dar atmosfera a seções escuras */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
