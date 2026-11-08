@@ -1,18 +1,31 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { site } from "@/data/manari";
 
-const cormorant = Cormorant_Garamond({
+/**
+ * Fontes hospedadas localmente (next/font/local) em vez de next/font/google.
+ *
+ * Motivo: `next/font/google` trava o build com Turbopack (bug do
+ * NextFontGoogleFontFileReplacer: "queries have exactly one entry"), e o build
+ * padrão do Next 16 usa Turbopack. Isso impedia a geração da pasta `out/` e
+ * fazia o deploy da Hostinger falhar. Com arquivos locais o build funciona em
+ * Turbopack e em webpack.
+ *
+ * Os .woff2 são as fontes variáveis (subset latino, que cobre os acentos do
+ * português) baixadas do Google Fonts — mesmas famílias de antes.
+ */
+const cormorant = localFont({
+  src: "./fonts/cormorant-garamond-latin.woff2",
   variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: "300 600",
   display: "swap",
 });
 
-const inter = Inter({
+const inter = localFont({
+  src: "./fonts/inter-latin.woff2",
   variable: "--font-inter",
-  subsets: ["latin"],
+  weight: "100 900",
   display: "swap",
 });
 
