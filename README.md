@@ -38,7 +38,7 @@ Abra, altere os textos entre aspas e salve — a página recarrega sozinha. Dest
 
 - **WhatsApp / telefone:** bloco `contact.whatsapp` (número `5592981270248` e exibição `(92) 98127-0248`).
 - **E-mail e Instagram:** bloco `contact`.
-- **As 7 experiências:** lista `experiences.items` (título, descrição e imagem de cada uma). Cada botão "Quero saber mais" abre o WhatsApp com o nome exato da experiência na mensagem.
+- **As 6 experiências:** lista `experiences.items` (título, descrição e imagem de cada uma). Cada botão "Quero saber mais" abre o WhatsApp com o nome exato da experiência na mensagem.
 - **Textos das seções:** `caminhos`, `essencia`, `personalizacao`, `galeria`, `idealizadores`, `ctaFinal`, `footer`.
 
 ### Trocar imagens
@@ -66,7 +66,7 @@ elegante no lugar.
 
 ## Estrutura da página (nesta ordem)
 
-Hero → Dois Caminhos → Essência → Portfólio (7 experiências) → Sob Medida →
+Hero → Dois Caminhos → Essência → Portfólio (6 experiências) → Sob Medida →
 Cultura e Sensorialidade → Idealizadores → CTA Final → Rodapé.
 
 Componentes em `src/components/sections/`; cabeçalho e rodapé em `src/components/`.

@@ -119,13 +119,13 @@ const pt = {
   },
 
   /**
-   * PORTFÓLIO — as 7 experiências oficiais.
+   * PORTFÓLIO — as 6 experiências oficiais.
    * `ctaLabel` é o botão de cada card; a mensagem de WhatsApp é montada
    * automaticamente com o nome exato da experiência.
    */
   experiences: {
     kicker: "Portfólio de experiências",
-    title: "Sete formas de viver a Amazônia",
+    title: "Seis formas de viver a Amazônia",
     intro:
       "Experiências do portfólio institucional da MANARI. Todas podem ser personalizadas conforme perfil, datas, número de participantes e propósitos especiais.",
     ctaLabel: "Quero saber mais",
@@ -153,12 +153,6 @@ const pt = {
         title: "Aromas de Cura",
         text: "Experiência sensorial com óleos essenciais, prática de yoga, banhos terapêuticos e massagem aromaterapêutica, em ambiente urbano ou rural a definir.",
         image: { src: `${IMG}/aromas-de-cura.webp`, alt: "Aromas de Cura — experiência sensorial de bem-estar" },
-      },
-      {
-        slug: "flor-do-tempo",
-        title: "Flor do Tempo",
-        text: "Ritual simbólico para aniversários ou ciclos de vida, com altar natural, canto ao vivo e mesa de frutas tropicais, em espaço ao ar livre a definir.",
-        image: { src: `${IMG}/flor-do-tempo.webp`, alt: "Flor do Tempo — ritual simbólico ao ar livre" },
       },
       {
         slug: "manari-receptivo",

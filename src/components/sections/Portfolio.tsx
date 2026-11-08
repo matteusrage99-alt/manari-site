@@ -6,9 +6,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { FloatingCarousel } from "@/components/ui/FloatingCarousel";
 
 /**
- * Portfólio — as 7 experiências oficiais.
- * Seis em grade editorial equilibrada (2 colunas) + a "Experiência Manari
- * Floating" em destaque, como experiência-assinatura (evita card órfão).
+ * Portfólio — as 6 experiências oficiais.
+ * Cinco em grade editorial equilibrada (2 colunas) + a "Manari Wellness
+ * Floating" em destaque, como experiência-assinatura.
  * Cada CTA abre o WhatsApp com o nome exato da experiência.
  */
 export function Portfolio() {
