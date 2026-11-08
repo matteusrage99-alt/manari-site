@@ -6,8 +6,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { FloatingCarousel } from "@/components/ui/FloatingCarousel";
 
 /**
- * Portfólio — as 4 experiências oficiais.
- * Três em grade editorial (2 colunas) + a "Manari Wellness Floating" em
+ * Portfólio — as 5 experiências oficiais.
+ * Quatro em grade editorial (2 colunas) + a "Manari Wellness Floating" em
  * destaque, como experiência-assinatura.
  * Cada CTA abre o WhatsApp com o nome exato da experiência.
  */

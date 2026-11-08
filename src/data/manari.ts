@@ -119,13 +119,13 @@ const pt = {
   },
 
   /**
-   * PORTFÓLIO — as 4 experiências oficiais.
+   * PORTFÓLIO — as 5 experiências oficiais.
    * `ctaLabel` é o botão de cada card; a mensagem de WhatsApp é montada
    * automaticamente com o nome exato da experiência.
    */
   experiences: {
     kicker: "Portfólio de experiências",
-    title: "Quatro formas de viver a Amazônia",
+    title: "Cinco formas de viver a Amazônia",
     intro:
       "Experiências do portfólio institucional da MANARI. Todas podem ser personalizadas conforme perfil, datas, número de participantes e propósitos especiais.",
     ctaLabel: "Quero saber mais",
@@ -156,6 +156,17 @@ const pt = {
           { src: `${IMG}/manari-receptivo-3.webp`, alt: "Manari Receptivo — toalhas geladas de boas-vindas com bambu" },
           { src: `${IMG}/manari-receptivo-4.webp`, alt: "Manari Receptivo — buffet regional servido à beira do rio" },
           { src: `${IMG}/manari-receptivo-5.webp`, alt: "Manari Receptivo — recepção da equipe para o grupo" },
+        ],
+      },
+      {
+        slug: "manari-rios-e-raizes",
+        title: "Manari Rios e Raízes",
+        text: "Um dia de conexão com a Amazônia. Navegue até uma comunidade indígena para conhecer seus costumes e aprender sobre seus rituais, saboreie um almoço amazônico a bordo e contemple o fascinante Encontro das Águas antes de retornar à cidade. (Ideal para grupos).",
+        image: { src: `${IMG}/manari-rios-e-raizes-1.webp`, alt: "Manari Rios e Raízes — vivência em comunidade indígena na Amazônia" },
+        gallery: [
+          { src: `${IMG}/manari-rios-e-raizes-1.webp`, alt: "Manari Rios e Raízes — líder indígena recebendo o grupo na comunidade" },
+          { src: `${IMG}/manari-rios-e-raizes-2.webp`, alt: "Manari Rios e Raízes — ritual indígena com instrumentos tradicionais" },
+          { src: `${IMG}/manari-rios-e-raizes-3.webp`, alt: "Manari Rios e Raízes — vista aérea dos rios e da floresta amazônica" },
         ],
       },
       {
