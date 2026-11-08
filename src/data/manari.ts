@@ -9,7 +9,7 @@
  *  Regras importantes (do briefing oficial):
  *  - Não inventar preço, disponibilidade, duração, mínimo de participantes
  *    ou locais específicos não confirmados.
- *  - "Aromas de Cura" nunca deve alegar cura médica ou benefício clínico.
+ *  - Nenhuma experiência de bem-estar deve alegar cura médica ou benefício clínico.
  *  - Não criar endereço, CNPJ, horários, selos ou biografias extras.
  *  - As imagens vieram do material institucional: confirme o direito de uso
  *    comercial na web antes de publicar.
@@ -119,13 +119,13 @@ const pt = {
   },
 
   /**
-   * PORTFÓLIO — as 6 experiências oficiais.
+   * PORTFÓLIO — as 4 experiências oficiais.
    * `ctaLabel` é o botão de cada card; a mensagem de WhatsApp é montada
    * automaticamente com o nome exato da experiência.
    */
   experiences: {
     kicker: "Portfólio de experiências",
-    title: "Seis formas de viver a Amazônia",
+    title: "Quatro formas de viver a Amazônia",
     intro:
       "Experiências do portfólio institucional da MANARI. Todas podem ser personalizadas conforme perfil, datas, número de participantes e propósitos especiais.",
     ctaLabel: "Quero saber mais",
@@ -141,18 +141,6 @@ const pt = {
         title: "Rio em Preto & Ouro",
         text: "Passeio fluvial privativo de luxo ao pôr do sol no Rio Negro, com drinks amazônicos, música instrumental e performance poética.",
         image: { src: `${IMG}/rio-em-preto-e-ouro.webp`, alt: "Rio em Preto & Ouro — passeio fluvial ao pôr do sol no Rio Negro" },
-      },
-      {
-        slug: "feitico-das-cores",
-        title: "Feitiço das Cores",
-        text: "Oficina criativa de pintura, artesanato ou biojoias conduzida por artistas locais, com roda de conversa e lanche regional. Realizada em comunidade parceira ou escola de artes, conforme planejamento.",
-        image: { src: `${IMG}/feitico-das-cores.webp`, alt: "Feitiço das Cores — oficina criativa com artistas locais" },
-      },
-      {
-        slug: "aromas-de-cura",
-        title: "Aromas de Cura",
-        text: "Experiência sensorial com óleos essenciais, prática de yoga, banhos terapêuticos e massagem aromaterapêutica, em ambiente urbano ou rural a definir.",
-        image: { src: `${IMG}/aromas-de-cura.webp`, alt: "Aromas de Cura — experiência sensorial de bem-estar" },
       },
       {
         slug: "manari-receptivo",
@@ -215,10 +203,10 @@ const pt = {
     images: [
       { src: `${IMG}/encantaria-do-jambu.webp`, alt: "Jantar imersivo com cultura local (MANARI)" },
       { src: `${IMG}/rio-em-preto-e-ouro.webp`, alt: "Rio Negro ao pôr do sol (MANARI)" },
-      { src: `${IMG}/feitico-das-cores.webp`, alt: "Arte e cores locais (MANARI)" },
-      { src: `${IMG}/aromas-de-cura.webp`, alt: "Experiência sensorial de bem-estar (MANARI)" },
-      { src: `${IMG}/flor-do-tempo.webp`, alt: "Ritual ao ar livre (MANARI)" },
-      { src: `${IMG}/manari-receptivo.webp`, alt: "Recepção personalizada para grupos (MANARI)" },
+      { src: `${IMG}/manari-floating-massagem.webp`, alt: "Massagem terapêutica amazônica no flutuante (MANARI)" },
+      { src: `${IMG}/manari-floating-flutuante.webp`, alt: "Flutuante privativo na Amazônia (MANARI)" },
+      { src: `${IMG}/manari-receptivo-2.webp`, alt: "Espumantes amazônicos de boas-vindas (MANARI)" },
+      { src: `${IMG}/manari-receptivo-4.webp`, alt: "Buffet regional à beira do rio (MANARI)" },
     ],
   },
 
