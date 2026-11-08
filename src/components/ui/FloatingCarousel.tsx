@@ -7,6 +7,8 @@ type Slide = { src: string; alt: string };
 
 type FloatingCarouselProps = {
   images: readonly Slide[];
+  /** Nome da experiência, usado nos rótulos de acessibilidade. */
+  label?: string;
   /** Intervalo do autoplay em ms (padrão: 5000). */
   interval?: number;
   /** Classe aplicada ao container (ex.: object-fit, alturas). */
@@ -28,6 +30,7 @@ type FloatingCarouselProps = {
  */
 export function FloatingCarousel({
   images,
+  label = "experiência",
   interval = 5000,
   className = "",
   sizes = "(max-width: 768px) 100vw, 50vw",
@@ -81,7 +84,7 @@ export function FloatingCarousel({
       onTouchEnd={onTouchEnd}
       role="group"
       aria-roledescription="carrossel"
-      aria-label="Galeria de fotos do MANARI Wellness Floating"
+      aria-label={`Galeria de fotos — ${label}`}
     >
       {images.map((slide, i) => (
         <div

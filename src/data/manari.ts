@@ -158,7 +158,17 @@ const pt = {
         slug: "manari-receptivo",
         title: "Manari Receptivo",
         text: "Recepção personalizada para grupos em aeroporto, hotel, porto ou eventos, com kit de boas-vindas, snacks, drinks e música regional, adaptada ao local do cliente.",
-        image: { src: `${IMG}/manari-receptivo.webp`, alt: "Manari Receptivo — recepção personalizada para grupos" },
+        image: { src: `${IMG}/manari-receptivo-1.webp`, alt: "Manari Receptivo — recepção personalizada para grupos" },
+        // Carrossel do card: a ordem aqui é a ordem de exibição. Para trocar/
+        // adicionar foto, coloque o arquivo em /public/images/manari/ e edite
+        // esta lista.
+        gallery: [
+          { src: `${IMG}/manari-receptivo-1.webp`, alt: "Manari Receptivo — mesas de boas-vindas montadas no deque do barco" },
+          { src: `${IMG}/manari-receptivo-2.webp`, alt: "Manari Receptivo — espumantes amazônicos e taças no kit de boas-vindas" },
+          { src: `${IMG}/manari-receptivo-3.webp`, alt: "Manari Receptivo — toalhas geladas de boas-vindas com bambu" },
+          { src: `${IMG}/manari-receptivo-4.webp`, alt: "Manari Receptivo — buffet regional servido à beira do rio" },
+          { src: `${IMG}/manari-receptivo-5.webp`, alt: "Manari Receptivo — recepção da equipe para o grupo" },
+        ],
       },
       {
         slug: "manari-floating",

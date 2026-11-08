@@ -36,25 +36,33 @@ export function Portfolio() {
         {grid.map((exp, i) => (
           <Reveal key={exp.slug} delay={(i % 2) * 90}>
             <article className="group flex h-full flex-col">
-              <a
-                href={experienceWhatsappUrl(exp.title)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative block aspect-[4/3] w-full overflow-hidden rounded-xl"
-                aria-label={`${experiences.ctaLabel}: ${exp.title}`}
-              >
-                <Image
-                  src={exp.image.src}
-                  alt={exp.image.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+              {"gallery" in exp ? (
+                <FloatingCarousel
+                  images={exp.gallery}
+                  label={exp.title}
+                  className="aspect-[4/3] w-full rounded-xl"
                 />
-                <div
-                  aria-hidden
-                  className="absolute inset-0 bg-gradient-to-t from-forest-deep/35 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                />
-              </a>
+              ) : (
+                <a
+                  href={experienceWhatsappUrl(exp.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block aspect-[4/3] w-full overflow-hidden rounded-xl"
+                  aria-label={`${experiences.ctaLabel}: ${exp.title}`}
+                >
+                  <Image
+                    src={exp.image.src}
+                    alt={exp.image.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                  />
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-t from-forest-deep/35 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  />
+                </a>
+              )}
 
               <h3 className="mt-6 font-display text-3xl font-medium text-forest">{exp.title}</h3>
               <p className="mt-3 flex-1 text-base leading-relaxed text-charcoal/75">{exp.text}</p>
@@ -79,6 +87,7 @@ export function Portfolio() {
           <article className="mt-16 grid overflow-hidden rounded-2xl bg-forest text-ivory md:grid-cols-2">
             <FloatingCarousel
               images={featured.gallery}
+              label={featured.title}
               className="min-h-[320px] md:min-h-full"
             />
             <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
