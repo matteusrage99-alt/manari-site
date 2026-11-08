@@ -168,9 +168,17 @@ const pt = {
       },
       {
         slug: "manari-floating",
-        title: "Experiência Manari Floating",
-        text: "Vivência em flutuante privativo na região de Manaus, com recepção cultural, buffet regional, música ao vivo, degustações e momento contemplativo.",
-        image: { src: `${IMG}/manari-floating.webp`, alt: "Experiência Manari Floating — vivência em flutuante privativo" },
+        title: "MANARI WELLNESS FLOATING",
+        text: "Um dia no flutuante com manhã de bem-estar, massagens amazônicas e banhos terapêuticos, seguido de gastronomia local, lazer e passeio pelos rios, encerrando com um jantar especial servido em 3 etapas. (Ideal para casais e grupos).",
+        image: { src: `${IMG}/manari-floating.webp`, alt: "MANARI WELLNESS FLOATING — um dia no flutuante com bem-estar e gastronomia" },
+        // Galeria do carrossel da experiência-assinatura. Para adicionar uma
+        // foto: coloque o arquivo em /public/images/manari/ e inclua mais um
+        // item { src, alt } nesta lista — a ordem aqui é a ordem de exibição.
+        gallery: [
+          { src: `${IMG}/manari-floating.webp`, alt: "MANARI WELLNESS FLOATING — massagens amazônicas no flutuante à beira do rio" },
+          { src: `${IMG}/manari-floating-massagem.webp`, alt: "MANARI WELLNESS FLOATING — massagem terapêutica em detalhe" },
+          { src: `${IMG}/manari-floating-flutuante.webp`, alt: "MANARI WELLNESS FLOATING — vista do flutuante privativo na Amazônia" },
+        ],
       },
     ],
   },

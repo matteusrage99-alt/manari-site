@@ -3,6 +3,7 @@ import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { site, experienceWhatsappUrl } from "@/data/manari";
 import { Section, Kicker } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
+import { FloatingCarousel } from "@/components/ui/FloatingCarousel";
 
 /**
  * Portfólio — as 7 experiências oficiais.
@@ -76,15 +77,10 @@ export function Portfolio() {
       {featured ? (
         <Reveal delay={120}>
           <article className="mt-16 grid overflow-hidden rounded-2xl bg-forest text-ivory md:grid-cols-2">
-            <div className="relative min-h-[320px] md:min-h-full">
-              <Image
-                src={featured.image.src}
-                alt={featured.image.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
+            <FloatingCarousel
+              images={featured.gallery}
+              className="min-h-[320px] md:min-h-full"
+            />
             <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
               <span className="kicker text-sand">Experiência-assinatura</span>
               <h3 className="mt-5 font-display text-4xl font-medium leading-tight sm:text-5xl">
